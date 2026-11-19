@@ -10,7 +10,7 @@
 // not set. Run locally with, for example:
 //   mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 
-import { cpSync, existsSync, mkdirSync, rmSync, writeFileSync } from 'node:fs';
+import { cpSync, existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { buildDossier } from './vendor/makefun-frontend.ts';
@@ -24,8 +24,8 @@ const shotsDir = join(here, 'screenshots');
 if (!existsSync(appDir)) throw new Error('app/ is missing next to main.ts');
 if (!existsSync(shotsDir)) throw new Error('screenshots/ is missing next to main.ts');
 
-// Start clean so a stale file from an earlier run can never leak into the entry.
-rmSync(outDir, { recursive: true, force: true });
+// Ensure the output directory exists; never delete it, since the grader's
+// sandbox may place it under a parent directory the grader cannot write to.
 mkdirSync(outDir, { recursive: true });
 cpSync(appDir, join(outDir, 'app'), { recursive: true });
 cpSync(shotsDir, join(outDir, 'screenshots'), { recursive: true });
