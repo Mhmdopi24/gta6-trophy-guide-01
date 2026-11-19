@@ -1,5 +1,1 @@
-[
-  { "file": "1-checklist.jpg", "path": "/", "viewport": { "width": 1280, "height": 800 } },
-  { "file": "2-silver.jpg", "path": "/", "grade": "silver", "viewport": { "width": 1280, "height": 800 } },
-  { "file": "3-bronze.jpg", "path": "/", "grade": "bronze", "scroll": 1400, "viewport": { "width": 1280, "height": 800 } }
-]
+[{"file":"1-checklist.jpg","notes":"Cover: checklist with the detail panel open on trophy 2 (Just Like Paradise), progress header and filters visible.","path":"/?demo=1#/trophy/2","viewport":{"height":800,"width":1280}},{"file":"2-roadmap.jpg","notes":"Roadmap to Platinum view.","path":"/?demo=1#/roadmap","viewport":{"height":800,"width":1280}},{"file":"3-missables.jpg","notes":"Missables view, missable-only filter active.","path":"/?demo=1#/missables","viewport":{"height":800,"width":1280}},{"file":"4-spoiler.jpg","notes":"Spoiler setting on: unearned story trophies hidden; export and import controls visible.","path":"/?demo=1&spoiler=1#/","viewport":{"height":800,"width":1280}}]
